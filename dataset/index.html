@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="wiseworker" /><link rel="canonical" href="http://www.wiseworker.com.cn/quickstart/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="wiseworker" /><link rel="canonical" href="http://www.wiseworker.com.cn/dataset/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>开始一个VsCode - WiseWorker</title>
+    <title>数据集 - WiseWorker</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "\u5f00\u59cb\u4e00\u4e2aVsCode";
-        var mkdocs_page_input_path = "quickstart.md";
-        var mkdocs_page_url = "/quickstart/";
+        var mkdocs_page_name = "\u6570\u636e\u96c6";
+        var mkdocs_page_input_path = "dataset.md";
+        var mkdocs_page_url = "/dataset/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -45,17 +45,17 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">快速开始</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="./">开始一个Jupyter</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart/">开始一个Jupyter</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">开始一个VsCode</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart/">开始一个VsCode</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">数据集</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../dataset/">数据集</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">数据集</a>
+    <ul class="current">
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">About</span></p>
@@ -77,8 +77,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>快速开始 &raquo;</li>
-      <li>开始一个VsCode</li>
+          <li>数据集 &raquo;</li>
+      <li>数据集</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -88,29 +88,51 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="_1">简介</h2>
-<p>JupyterLab是Jupyter Notebook的全面升级。JupyterLab 是一个集 Jupyter Notebook、文本编辑器、终端以及各种个性化组件于一体的全能IDE,相比Jupyter Notebook，JupyterLab能够打开更多的文件格式，除了代码文件（.py、.cpp），还包括CSV、JSON、Markdown、PDF。</p>
-<h2 id="_2">操作步骤</h2>
-<p>1、进入“模型开发”页面<br />
+<p>深度学习算法的效果离不开高质量数据集，数据集用于对数据的管理，支持NFS、ceph和S3等存储</p>
+<h2 id="_2">创建数据集</h2>
+<h3 id="_3">操作步骤</h3>
+<p>1、进入“数据集”界面<br />
 2、点击“新增”按钮<br />
-3、填写表单信息、类型选择“Jupyter”  </p>
+3、填写表单信息  </p>
 <table>
 <tr><td>参数</td><td>描述</td></tr>
-<tr><td>名称</td><td>模型开发任务的名称，长度在5-40之间，必填</td></tr>
-<tr><td>描述</td><td>对任务的描述，必填</td></tr>
+<tr><td>名称</td><td>数据集的名称5-40之间，必填</td></tr>
+<tr><td>挂载路径</td><td>在模型开发和模型训练时，数据挂载到容器里的目录名称，只能时字母和数字，并且只能字母开发</td></tr>
+<tr><td>数据类型</td><td>数据集的类型、图片、文本、视频、表格等</td></tr>
 <tr><td>配图</td><td>任务的配图，非必填</td></tr>
-<tr><td>环境（主节点）</td><td>环境是平台预制的开发环境，分为公开（平台发布的）、共享（每个租户内部共享）、私有（每个用户独享）</td></tr>
-<tr><td>资源组</td><td>平台将内存、CPU、GPU打包一组资源组让用户使用，资源组由管理员在控制台维护</td></tr>  
+<tr><td>描述</td><td>对数据集的描述</td></tr> 
 </table>
-<p>4、 点击“确定”，进入“详情页”<br />
-<img alt="Screenshot" src="../img/jupyterlab.png" /><br />
-5、点击“启动”按钮，等待一会，详情页的进度条会显示启动的进度  <br />
-6 等待状态变成“运行中”，点击“进入”按钮，即可进入JupyterLab  </p>
+<p>3、点击“下一步”按钮，进入文件上传界面<br />
+4、选择“本地上传”或者“S3接入”，本地上传是指通过上传本地数据集到服务器的存储上，S3接入表示数据集使用S3上的数据，关于S3的数据集请参考S3数据集管理。<br />
+5、选择“本地上传”以后，上传本地的文件，支持文件夹和文件上传。数据集比较大时请使用cli上传，关于cli请参考cli章节<br />
+6、 点击“确定”按钮  <br />
+7、数据集创建成功以后，点击“立即前往”，进入数据集“详情页”<br />
+<img alt="Screenshot" src="../img/dataset.png" />  </p>
+<h2 id="_4">修改数据集</h2>
+<p>1、进入“数据集”界面<br />
+2、选中数据集进入"详情页” </p>
+<h3 id="_5">修改基本信息</h3>
+<p>1、点击文件名旁边的修改按钮，弹出对话框，修改基本信息<br />
+1、填写修改的表单信息
+2、点击“确定”按钮，保存修改记录</p>
+<h3 id="_6">修改数据来源</h3>
+<p>1、 点击右边数据来源旁边的修改按钮，弹出对话框。
+2、修改数据来源
+3、点击”确定“，保存修改信息 </p>
+<h3 id="_7">追加文件</h3>
+<p>1、在工作区中点击“+”按钮进行追加文件</p>
+<h3 id="_8">删除文件</h3>
+<p>1、 选中文件，右键弹出菜单，点击“删除”按钮，删除文件</p>
+<h2 id="_9">删除数据集</h2>
+<p>1、进入“数据集”界面  <br />
+2、选中数据集进入，移动到删除按钮旁，会弹出删除按钮。<br />
+3、弹出确认删除的对话框，点击“确认”按钮，删除数据集  </p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="./" class="btn btn-neutral float-left" title="开始一个Jupyter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../dataset/" class="btn btn-neutral float-right" title="数据集">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../quickstart/" class="btn btn-neutral float-left" title="开始一个VsCode"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../license/" class="btn btn-neutral float-right" title="版权">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -133,10 +155,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="./" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../quickstart/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../dataset/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../license/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
