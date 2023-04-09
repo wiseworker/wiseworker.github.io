@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="wiseworker" /><link rel="canonical" href="http://www.wiseworker.com.cn/dataset/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="wiseworker" /><link rel="canonical" href="http://www.wiseworker.com.cn/model/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>数据集 - WiseWorker</title>
+    <title>模型管理 - WiseWorker</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "\u6570\u636e\u96c6";
-        var mkdocs_page_input_path = "dataset.md";
-        var mkdocs_page_url = "/dataset/";
+        var mkdocs_page_name = "\u6a21\u578b\u7ba1\u7406";
+        var mkdocs_page_input_path = "model.md";
+        var mkdocs_page_url = "/model/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -52,10 +52,8 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">数据集</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">数据集</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dataset/">数据集</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">模型开发</span></p>
@@ -83,8 +81,8 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">模型管理</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../model/">模型管理</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">模型管理</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">模型部署</span></p>
@@ -127,8 +125,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>数据集 &raquo;</li>
-      <li>数据集</li>
+          <li>模型管理 &raquo;</li>
+      <li>模型管理</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -137,54 +135,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="_1">简介</h2>
-<p>深度学习算法的效果离不开高质量数据集，数据集用于对数据的管理，支持NFS、ceph和S3等存储</p>
-<h2 id="_2">创建数据集</h2>
-<h3 id="_3">操作步骤</h3>
-<p>1、进入“数据集”界面<br />
-2、点击“新增”按钮<br />
-3、填写表单信息  </p>
-<table>
-<tr><td>参数</td><td>描述</td></tr>
-<tr><td>名称</td><td>数据集的名称5-40之间，必填</td></tr>
-<tr><td>挂载路径</td><td>在模型开发和模型训练时，数据挂载到容器里的目录名称，只能时字母和数字，并且只能字母开发</td></tr>
-<tr><td>数据类型</td><td>数据集的类型、图片、文本、视频、表格等</td></tr>
-<tr><td>配图</td><td>任务的配图，非必填</td></tr>
-<tr><td>描述</td><td>对数据集的描述</td></tr> 
-</table>
-<p>3、点击“下一步”按钮，进入文件上传界面<br />
-4、选择“本地上传”或者“S3接入”，本地上传是指通过上传本地数据集到服务器的存储上，S3接入表示数据集使用S3上的数据，关于S3的数据集请参考S3数据集管理。<br />
-5、选择“本地上传”以后，上传本地的文件，支持文件夹和文件上传。数据集比较大时请使用cli上传，关于cli请参考cli章节<br />
-6、 点击“确定”按钮  <br />
-7、数据集创建成功以后，点击“立即前往”，进入数据集“详情页”  </p>
-<h2 id="_4">修改数据集</h2>
-<p>1、进入“数据集”界面<br />
-2、选中数据集进入"详情页” 
-<img alt="Screenshot" src="../img/dataset.png" />  </p>
-<h3 id="_5">修改基本信息</h3>
-<p>1、点击数据集名称旁边的修改按钮，弹出对话框，修改基本信息<br />
-2、填写修改的表单信息<br />
-3、点击“确定”按钮，保存修改记录  </p>
-<h3 id="_6">修改数据来源</h3>
-<p>1、 点击右边数据来源旁边的修改按钮，弹出对话框。<br />
-2、修改数据来源<br />
-3、点击”确定“，保存修改信息  </p>
-<h3 id="_7">修改描述信息</h3>
-<p>1、 数据集描述信息采用Markdown格式、点击修改按钮可以进行在线编辑</p>
-<h3 id="_8">追加文件</h3>
-<p>1、在工作区中点击“+”按钮进行追加文件</p>
-<h3 id="_9">删除文件</h3>
-<p>1、 选中文件，右键弹出菜单，点击“删除”按钮，删除文件</p>
-<h2 id="_10">删除数据集</h2>
-<p>1、进入“数据集”界面  <br />
-2、选中数据集进入，移动到删除按钮旁，会弹出删除按钮。<br />
-3、弹出确认删除的对话框，点击“确认”按钮，删除数据集  </p>
+                
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../quickstart/" class="btn btn-neutral float-left" title="开始一个VsCode"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../expriment/" class="btn btn-neutral float-right" title="模型开发">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../task/" class="btn btn-neutral float-left" title="复制训练任务"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -207,10 +163,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../quickstart/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../task/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../expriment/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
