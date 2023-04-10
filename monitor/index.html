@@ -104,6 +104,12 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#_2">折线图</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">饼状图</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">柱状图</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">散点图</a>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -145,33 +151,32 @@ client = WiseClient()
 <h3 id="_2">折线图</h3>
 <p>在循环中插入log_metric即可</p>
 <pre><code> client.log_metric(&quot;loss&quot;, loss)
- ```
-### 饼状图
 </code></pre>
-<p>data = [5, 2, 3, 4]
+<h3 id="_3">饼状图</h3>
+<pre><code>data = [5, 2, 3, 4]
 labels = ['猫', '狗', '汽车', '自行车']
 plt = client.import_plt()
 plt.pie(x=data, labels=labels, radius=1.5)
-plt.legend(labels, loc="upper left", bbox_to_anchor=(1.2, 0, 0.5, 1))
-plt.title("类被占比%")
+plt.legend(labels, loc=&quot;upper left&quot;, bbox_to_anchor=(1.2, 0, 0.5, 1))
+plt.title(&quot;类被占比%&quot;)
 plt.show(run_id=15, key='chart-P')
-plt.clf()</p>
-<pre><code>### 柱状图
+plt.clf()
 </code></pre>
-<p>plt = client.import_plt()
+<h3 id="_4">柱状图</h3>
+<pre><code>plt = client.import_plt()
 plt.bar(X, data[0], color='red', width=0.25, label='坦克')
 plt.bar(X + 0.25, data[1], color='yellow', width=0.25, label='飞机')
 plt.bar(X + 0.50, data[2], color='blue', width=0.25, label='军舰')
 plt.xticks(X + 0.25, labels)
-plt.xlabel("step")
-plt.ylabel("战损")
-plt.title("战损柱状图")
+plt.xlabel(&quot;step&quot;)
+plt.ylabel(&quot;战损&quot;)
+plt.title(&quot;战损柱状图&quot;)
 plt.legend()
 plt.show(run_id=12, key='chart-D')
-plt.clf()</p>
-<pre><code>### 散点图
+plt.clf()
 </code></pre>
-<p>plt = client.import_plt()
+<h3 id="_5">散点图</h3>
+<pre><code>plt = client.import_plt()
 x1 = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 x2 = np.array([1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5])
 y = np.array([1, 4, 9, 16, 7, 11, 23, 18])
@@ -180,10 +185,10 @@ plt.scatter(x1, y, s=100, c='red', marker='*', alpha=0.7)
 plt.scatter(x2, z, s=100, c='blue', alpha=0.8)
 plt.xlabel('step')
 plt.ylabel('value')
-plt.title("loss关系")
-plt.legend(['target', 'actor'], loc="upper left")
+plt.title(&quot;loss关系&quot;)
+plt.legend(['target', 'actor'], loc=&quot;upper left&quot;)
 plt.show(run_id= 165, key='chart-S')
-```</p>
+</code></pre>
               
             </div>
           </div><footer>
