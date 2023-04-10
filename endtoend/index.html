@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="wiseworker" /><link rel="canonical" href="http://www.wiseworker.com.cn/license/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="wiseworker" /><link rel="canonical" href="http://www.wiseworker.com.cn/endtoend/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>License - WiseWorker</title>
+    <title>端到端的流程 - WiseWorker</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "License";
-        var mkdocs_page_input_path = "license.md";
-        var mkdocs_page_url = "/license/";
+        var mkdocs_page_name = "\u7aef\u5230\u7aef\u7684\u6d41\u7a0b";
+        var mkdocs_page_input_path = "endtoend.md";
+        var mkdocs_page_url = "/endtoend/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -45,14 +45,16 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">快速开始</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../quickstart/">开始一个Jupyter</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../quickstart/">开始一个VsCode</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../distributed/">分布式的训练</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../endtoend/">端到端的流程</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">端到端的流程</a>
+    <ul class="current">
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">数据集</span></p>
@@ -121,7 +123,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>License</li>
+          <li>快速开始 &raquo;</li>
+      <li>端到端的流程</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -130,11 +133,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="_1"></h2>
-<p>版权所有</p>
+                <h2 id="_1">端到端全流程</h2>
+<p>端到端全流程包括数据集处理-模型开发-模型训练-模型部署和应用-监控和运维，提供一整套对应AI全生命周期的工具和服务
+<img alt="Screenshot" src="../img/endtoend.png" />  </p>
+<h2 id="_2">数据准备</h2>
+<p>创建一个数据集、上传数据集的文件。</p>
+<h2 id="_3">模型开发</h2>
+<p>创建一个VSCode的模型开发的任务，数据集选择刚才上传的数据集。
+启动以后，进入到VSCode，进行算法的开发，刚才选择的数据集挂载在容器的/dataset/数据集目录</p>
+<h2 id="_4">模型训练</h2>
+<p>算法开发完成以后，对于长时间的训练，可以将算法提交模型训练任务。
+点击“更多”按钮，选择“模型训练”<br />
+<img alt="Screenshot" src="img/exporttask.png.png" /><br />
+填写模型训练的表单信息。
+启动模型训练任务</p>
+<h2 id="_5">导出模型</h2>
+<p>导出模型，模型训练完成以后，点击“更多”按钮，选择“导出模型”
+<img alt="Screenshot" src="img/exportmodel2.png.png" /><br />
+<img alt="Screenshot" src="img/exportmodel3.png.png" /><br />
+<img alt="Screenshot" src="img/exportmodel.png.png" />  </p>
+<h2 id="_6">模型应用</h2>
+<p>创建一个模型应用的任务，选在刚才训练好的模型，运行模型应用的服务，即可进行推理。</p>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../distributed/" class="btn btn-neutral float-left" title="分布式的训练"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../dataset/" class="btn btn-neutral float-right" title="数据集">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -156,6 +182,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="../distributed/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../dataset/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

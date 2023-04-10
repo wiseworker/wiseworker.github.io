@@ -2,42 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://www.wiseworker.com.cn/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://www.wiseworker.com.cn/dataset/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://www.wiseworker.com.cn/deploy/</loc>
+         <lastmod>2023-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://www.wiseworker.com.cn/distributed/</loc>
+         <lastmod>2023-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://www.wiseworker.com.cn/endtoend/</loc>
+         <lastmod>2023-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://www.wiseworker.com.cn/expriment/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://www.wiseworker.com.cn/license/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://www.wiseworker.com.cn/model/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://www.wiseworker.com.cn/monitor/</loc>
+         <lastmod>2023-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://www.wiseworker.com.cn/quickstart/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://www.wiseworker.com.cn/quickstart2/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://www.wiseworker.com.cn/task/</loc>
-         <lastmod>2023-04-09</lastmod>
+         <lastmod>2023-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

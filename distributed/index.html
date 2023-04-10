@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="wiseworker" /><link rel="canonical" href="http://www.wiseworker.com.cn/license/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="wiseworker" /><link rel="canonical" href="http://www.wiseworker.com.cn/distributed/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>License - WiseWorker</title>
+    <title>分布式的训练 - WiseWorker</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "License";
-        var mkdocs_page_input_path = "license.md";
-        var mkdocs_page_url = "/license/";
+        var mkdocs_page_name = "\u5206\u5e03\u5f0f\u7684\u8bad\u7ec3";
+        var mkdocs_page_input_path = "distributed.md";
+        var mkdocs_page_url = "/distributed/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -45,12 +45,14 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">快速开始</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../quickstart/">开始一个Jupyter</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../quickstart/">开始一个VsCode</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../distributed/">分布式的训练</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">分布式的训练</a>
+    <ul class="current">
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../endtoend/">端到端的流程</a>
                   </li>
@@ -121,7 +123,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>License</li>
+          <li>快速开始 &raquo;</li>
+      <li>分布式的训练</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -130,11 +133,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="_1"></h2>
-<p>版权所有</p>
+                <h2 id="_1">分布式开发</h2>
+<p>平台支持分布式开发是通过通过平台启动多个分布式容器来实现的，容器之间配置了ssh免密登录。模型开发和模型训练的分布式环境保持一致。</p>
+<h2 id="_2">创建分布式模型开发环境</h2>
+<p>1、进入“模型开发”界面<br />
+2、点击“新增”按钮<br />
+3、填写表单信息 （参考模型开发）
+4、在开发环境配置中，增加子节点  <br />
+<img alt="Screenshot" src="../img/deploy.png" /><br />
+5、点击“确定”按钮</p>
+<h2 id="ip">如何发现IP地址</h2>
+<p>1、通过环境变量发现地址：
+MASTER ：主节点地址
+SLAVE_0: 第一个子节点IP地址，（SLAVE_1 第二个子节点IP，依次类推）
+2、通过  /wise/hostfile.json </p>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../quickstart/" class="btn btn-neutral float-left" title="开始一个VsCode"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../endtoend/" class="btn btn-neutral float-right" title="端到端的流程">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -156,6 +175,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="../quickstart/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../endtoend/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="wiseworker" /><link rel="canonical" href="http://www.wiseworker.com.cn/license/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="wiseworker" /><link rel="canonical" href="http://www.wiseworker.com.cn/deploy/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>License - WiseWorker</title>
+    <title>模型部署 - WiseWorker</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "License";
-        var mkdocs_page_input_path = "license.md";
-        var mkdocs_page_url = "/license/";
+        var mkdocs_page_name = "\u6a21\u578b\u90e8\u7f72";
+        var mkdocs_page_input_path = "deploy.md";
+        var mkdocs_page_url = "/deploy/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -86,8 +86,10 @@
                 <li class="toctree-l1"><a class="reference internal" href="../model/">模型管理</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../deploy/">模型部署</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">模型部署</a>
+    <ul class="current">
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -121,7 +123,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>License</li>
+      <li>模型部署</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -130,11 +132,62 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="_1"></h2>
-<p>版权所有</p>
+                <h2 id="_1">简介</h2>
+<p>模型应用即将模型管理中的模型部署为在线服务，从而以REST API或者网页的方式提供推理预测能力</p>
+<h2 id="_2">创建</h2>
+<h3 id="_3">操作步骤</h3>
+<p>1、进入“模型应用”界面<br />
+2、点击“新增”按钮<br />
+3、填写表单信息  </p>
+<table>
+<tr><td>参数</td><td>描述</td></tr>
+<tr><td>名称</td><td>模型名称5-40之间，必填</td></tr>
+<tr><td>描述</td><td>模型的描述，必填</td></tr>
+<tr><td>模型</td><td>模型管理中的模型</td></tr>
+<tr><td>版本</td><td>模型管理中的版本</td></tr> 
+<tr><td>推理环境</td><td>模型运行的环境</td></tr> 
+<tr><td>启动命令行</td><td>运行模型推理的命令行</td></tr> 
+<tr><td>资源组</td><td>模型运行需要资源配置组</td></tr> 
+<tr><td>数量</td><td>模型运行的容器数量（支持高可用）</td></tr> 
+<tr><td>端口</td><td>应用需要暴露的端口</td></tr> 
+</table>
+<p>4、点击“下一步”按钮，进入文件上传界面<br />
+5、上传本地的文件，支持文件夹和文件上传。
+6、点击“确定”按钮  <br />
+7、模型应用创建成功以后，点击“立即前往”，进入“详情页”  </p>
+<h2 id="_4">修改</h2>
+<p>1、进入“模型应用”界面<br />
+2、选中记录进入"详情页” 
+<img alt="Screenshot" src="../img/deploy.png" />  </p>
+<h3 id="_5">修改基本信息</h3>
+<p>1、点击模型应用管理“详情页”名称旁边的修改按钮，弹出对话框，修改基本信息<br />
+2、填写修改的表单信息<br />
+3、点击“确定”按钮，保存修改记录  </p>
+<h3 id="_6">修改模型</h3>
+<p>1、点击模型信息旁边的修改按钮，弹出对话框。<br />
+2、修改模型<br />
+3、点击”确定“，保存修改信息  </p>
+<h3 id="_7">修改推理环境</h3>
+<p>1、点击推理环境旁边的修改按钮，弹出对话框。<br />
+2、修改推理环境
+3、点击”确定“，保存修改信息  </p>
+<h3 id="_8">修改描述信息</h3>
+<p>1、 模型信息描述信息采用Markdown格式、点击修改按钮可以进行在线编辑</p>
+<h3 id="_9">追加文件</h3>
+<p>1、在工作区中点击“+”按钮进行追加文件</p>
+<h3 id="_10">删除文件</h3>
+<p>1、 选中文件，右键弹出菜单，点击“删除”按钮，删除文件</p>
+<h2 id="_11">删除</h2>
+<p>1、进入“模型应用”界面  <br />
+2、选中记录，移动到删除按钮旁，会弹出删除按钮。<br />
+3、弹出确认删除的对话框，点击“确认”按钮，删除记录  </p>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../model/" class="btn btn-neutral float-left" title="模型管理"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../monitor/" class="btn btn-neutral float-right" title="指标监控">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -156,6 +209,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="../model/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../monitor/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

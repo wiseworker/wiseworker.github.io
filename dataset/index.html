@@ -50,12 +50,18 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../quickstart/">开始一个VsCode</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../distributed/">分布式的训练</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../endtoend/">端到端的流程</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">数据集</span></p>
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">数据集</a>
     <ul class="current">
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../annotate.md">数据标注</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">模型开发</span></p>
@@ -65,8 +71,6 @@
                   <li class="toctree-l1"><a class="" href="../exportModel.md">导出模型</a>
                   </li>
                   <li class="toctree-l1"><a class="" href="../commitTask.md">训练任务</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../monitor.md">监控</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">模型训练</span></p>
@@ -79,34 +83,26 @@
                   </li>
                   <li class="toctree-l1"><a class="" href="../WebSsh.md">WebSsh</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../monitor.md">监控</a>
-                  </li>
               </ul>
-              <p class="caption"><span class="caption-text">模型管理</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../model/">模型管理</a>
-                  </li>
+                <li class="toctree-l1"><a class="reference internal" href="../model/">模型管理</a>
+                </li>
               </ul>
-              <p class="caption"><span class="caption-text">模型部署</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="" href="../deploy.md">模型部署</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../monitor.md">监控</a>
-                  </li>
+                <li class="toctree-l1"><a class="reference internal" href="../deploy/">模型部署</a>
+                </li>
               </ul>
-              <p class="caption"><span class="caption-text">我的环境</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="" href="../image.md">我的环境</a>
-                  </li>
+                <li class="toctree-l1"><a class="" href="../image.md">我的环境</a>
+                </li>
               </ul>
-              <p class="caption"><span class="caption-text">AI市场</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="" href="../market.md">AI市场</a>
-                  </li>
+                <li class="toctree-l1"><a class="" href="../market.md'">AI市场</a>
+                </li>
               </ul>
               <p class="caption"><span class="caption-text">SDK</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="" href="../sdk.md">SDK</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor/">指标监控</a>
                   </li>
               </ul>
               <ul>
@@ -147,16 +143,16 @@
 <table>
 <tr><td>参数</td><td>描述</td></tr>
 <tr><td>名称</td><td>数据集的名称5-40之间，必填</td></tr>
-<tr><td>挂载路径</td><td>在模型开发和模型训练时，数据挂载到容器里的目录名称，只能时字母和数字，并且只能字母开发</td></tr>
+<tr><td>挂载路径</td><td>在模型开发和模型训练时，数据挂载到容器里的目录名称，只能时字母和数字，并且只能字母开头</td></tr>
 <tr><td>数据类型</td><td>数据集的类型、图片、文本、视频、表格等</td></tr>
 <tr><td>配图</td><td>任务的配图，非必填</td></tr>
 <tr><td>描述</td><td>对数据集的描述</td></tr> 
 </table>
-<p>3、点击“下一步”按钮，进入文件上传界面<br />
-4、选择“本地上传”或者“S3接入”，本地上传是指通过上传本地数据集到服务器的存储上，S3接入表示数据集使用S3上的数据，关于S3的数据集请参考S3数据集管理。<br />
-5、选择“本地上传”以后，上传本地的文件，支持文件夹和文件上传。数据集比较大时请使用cli上传，关于cli请参考cli章节<br />
-6、 点击“确定”按钮  <br />
-7、数据集创建成功以后，点击“立即前往”，进入数据集“详情页”  </p>
+<p>4、点击“下一步”按钮，进入文件上传界面<br />
+5、选择“本地上传”或者“S3接入”，本地上传是指通过上传本地数据集到服务器的存储上，S3接入表示数据集使用S3上的数据，关于S3的数据集请参考S3数据集管理。<br />
+6、选择“本地上传”以后，上传本地的文件，支持文件夹和文件上传。数据集比较大时请使用cli上传，关于cli请参考cli章节<br />
+7、 点击“确定”按钮  <br />
+8、数据集创建成功以后，点击“立即前往”，进入数据集“详情页”  </p>
 <h2 id="_4">修改数据集</h2>
 <p>1、进入“数据集”界面<br />
 2、选中数据集进入"详情页” 
@@ -183,7 +179,7 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../quickstart/" class="btn btn-neutral float-left" title="开始一个VsCode"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../endtoend/" class="btn btn-neutral float-left" title="端到端的流程"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../expriment/" class="btn btn-neutral float-right" title="模型开发">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -207,7 +203,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../quickstart/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../endtoend/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../expriment/" style="color: #fcfcfc">Next &raquo;</a></span>
